@@ -125,3 +125,20 @@ This is the example to use ggplot2, which is one decent tool in R to visualize t
 ## Bongyong	Uh
 ## Xinting	Zhang
 ## Sicong	Zheng
+
+Below is my example of a vis created with the `ggplot2` package using the `diamonds` dataset, which consists of prices and quality information
+about 54,000 diamonds, and is included in the ggplot2 package. The data
+contains the four C’s of diamond quality, carat, cut, colour and clarity; and
+ﬁve physical measurements, depth, table, x, y and z.
+
+
+```{r, echo=TRUE}
+library(ggplot2)                            # Loading ggplot library
+data(diamonds)                              # Included dataset on round cut diamonds color
+
+ggplot(diamonds,                            # data frme 
+       aes(cut,color))+                     # aesthetic mapping
+       geom_count(                          # add layer
+       colour="#CC79A7")+                   # map color
+       ggtitle("round cut diamonds color")  # add title
+```
